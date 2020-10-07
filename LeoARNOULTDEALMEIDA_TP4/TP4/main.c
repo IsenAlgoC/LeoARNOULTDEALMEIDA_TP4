@@ -11,7 +11,7 @@ int main() {
 	HeureFin.minute = HeureDebut.minute + Duree.minute;
 	HeureFin.heure = HeureDebut.heure + Duree.heure;
 	if (HeureFin.minute / 60 >= 1) {
-		HeureFin.heure += (HeureFin.minute - (HeureFin.minute % 60)) / 60 ;
+		HeureFin.heure += HeureFin.minute / 60;
 		HeureFin.minute = HeureFin.minute % 60;
 	}
 	printf("Depart %02d:%02d Duree %02d:%02d Arrivee %02d:%02d", HeureDebut.heure, HeureDebut.minute, Duree.heure, Duree.minute, HeureFin.heure, HeureFin.minute);
